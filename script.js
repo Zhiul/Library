@@ -27,11 +27,13 @@ if(storedBooks === null){
 
 updateLibrary();
 
-function Book(title, author, pages, completedPages){
-  this.title = title,
-  this.author = author,
-  this.pages = pages,
-  this.completedPages = completedPages;
+class Book{
+  constructor(title, author, pages, completedPages){
+    this.title = title,
+    this.author = author,
+    this.pages = pages,
+    this.completedPages = completedPages;
+  }
 }
 
 function addBookToLibrary(titleInput, authorInput, pagesInput, completedPagesInput) {
@@ -94,11 +96,13 @@ function updateLibrary(){
 
 // Input fields
 
-function Inputs(bookTitle, bookAuthor, bookPages, bookCompletedPages){
-  this.bookTitle = bookTitle,
-  this.bookAuthor = bookAuthor,
-  this.bookPages = bookPages,
-  this.bookCompletedPages = bookCompletedPages
+class Inputs{
+  constructor(bookTitle, bookAuthor, bookPages, bookCompletedPages){
+    this.bookTitle = bookTitle,
+    this.bookAuthor = bookAuthor,
+    this.bookPages = bookPages,
+    this.bookCompletedPages = bookCompletedPages
+  }
 }
 
 let addInputs = new Inputs(document.querySelector('#book-title'),
