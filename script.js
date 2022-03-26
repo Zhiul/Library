@@ -51,9 +51,9 @@ function updateLibrary(){
           booksContainer.insertAdjacentHTML("beforeend", `
           <div class="book" data-number='${i}'>
           <div class="book-panel">
-              <button class='book-edit' data-modal-target='#modal2'><img src="/assets/pencil.svg" alt="Edit"></button>
+              <button class='book-edit' data-modal-target='#modal2'><img src="./assets/pencil.svg" alt="Edit"></button>
               <div class="book-panel-separator"></div>
-              <button class='book-delete'><img src="/assets/delete.svg" alt="Delete"></button>
+              <button class='book-delete'><img src="./assets/delete.svg" alt="Delete"></button>
           </div>
 
           <h2 class="book-title">${myLibrary[i].title}</h2>
@@ -188,6 +188,7 @@ editBookBtn.addEventListener('click', () => {
       editInputs.bookAuthor.value = '';
       editInputs.bookPages.value = '';
       editInputs.bookCompletedPages.value = '';
+      closeModal(modal);
     } else if(editInputs.bookCompletedPages.value > editInputs.bookPages.value && editInputs.bookPages != 0){
       editInputs.bookCompletedPages.value = '';
       editInputs.bookCompletedPages.placeholder = 'Must be less'
